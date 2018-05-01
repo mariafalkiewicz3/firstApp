@@ -1,4 +1,4 @@
 class SimplePagesController < ApplicationController
-  def index
+  def contact
   end
 end
