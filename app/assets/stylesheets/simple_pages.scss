@@ -1,3 +1,36 @@
 // Place all the styles related to the simple_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.navbar-inverse,
+ .colapse {
+  opacity: 0.8;
+  margin-left: -15px;
+  margin-right: -15px;
+  background-color: grey;
+  padding-right: 10px;
+}
+ .navbar-inverse .navbar-nav>li>a {
+    color: #a8107a;
+    font-weight: 600;
+}
+ .navbar-inverse .navbar-nav>.active>a {
+  color: #a4107a;
+  font-weight: 700;
+  background-color: #646668;
+}
+
+h1 {
+  font: 100% Helvetica, sans-serif;
+  color: #333;
+  font-size: 2em;
+}
+h2 {
+  font: 100% Helvetica, sans-serif;
+  color: gray;
+  font-size: 1.5em;
+}
+p {
+  font: 100% Helvetica, sans-serif;
+  color: darkgrey;
+  font-size: 1.2em;
+}
