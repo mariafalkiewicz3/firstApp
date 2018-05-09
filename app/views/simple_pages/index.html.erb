@@ -1,4 +1,4 @@
 <h1>Welcome to LifeOnTour Store </h1>
 <h2>Wher you can find sport and camping equipment for your trip. </h2>
 
-<%= image_tag(@product.image_http://www.freeimageslive.co.uk/files/images010/squirrel-free2.preview.jpg, class: "img-responsive") if product.image_http://www.freeimageslive.co.uk/files/images010/squirrel-free2.preview.jpg.present? %>
+<%= image_tag(@product.image_url, class: "img-responsive") if @product.image_url.present? %>
