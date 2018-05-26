@@ -8,7 +8,11 @@
       <td><strong>Description:</strong>
         <%= @product.description %></td>
       <td><strong>Image url:</strong>
-        <%= @product.image_url %>
+        <%= @product.image_url %></td>
+      <td><strong>Colour:</strong>
+        <%= @product.colour %></td>
+      <td><strong>Price:</strong>
+        <%= @product.price %></td>  
       <td><%= link_to 'Edit', edit_product_path(@product) %></td>
       <td><%= link_to 'Back', products_path %></td>
     </tr>
