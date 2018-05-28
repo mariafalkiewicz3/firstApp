@@ -7,8 +7,8 @@
         <%= @product.name %></td>
       <td><strong>Description:</strong>
         <%= @product.description %></td>
-      <td><strong>Image url:</strong>
-        <%= @product.image_url %></td>
+      <td><strong>Image:</strong>
+        <%= image_tag(@product.image_url, class: "img-responsive") %>
       <td><strong>Colour:</strong>
         <%= @product.colour %></td>
       <td><strong>Price:</strong>
