@@ -20,6 +20,7 @@ class ProductsController < ApplicationController
 
   # GET /products/1/edit
   def edit
+    redirect_to "/simple_pages/contact"
   end
 
   # POST /products
