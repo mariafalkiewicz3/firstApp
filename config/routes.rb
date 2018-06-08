@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get 'simple_pages/contact'
   get '/products', to: 'products#index'
   get '/orders', to: 'orders#index'
+  post 'simple_pages/thank_you'
 end
 
 Rails.application.routes.draw do 
@@ -14,4 +15,5 @@ Rails.application.routes.draw do
   get 'simple_pages/contact'
   get '/products', to: 'products#index'
   get '/orders', to: 'orders#index'
+  post 'simple_pages/thank_you'
 end
