@@ -49,9 +49,14 @@
       </div> <!--end container fluid-->
     </nav> <!-- end navbar -->
     
-    <p id="notice"><%= notice %></p>
-    <%= yield %>
+    <% if notice %>
+      <p id="notice" class="alert alert-info" role="alert"><%= notice %></p>
+    <% end %>
     
+    <%= yield %>
+    <% if alert %>
+      <p class="alert alert-danger" role="alert"><%= alert %></p>
+    <% end %>
     <div class="page-wrap">
     </div>
     <footer class="container" id="footer-main">
