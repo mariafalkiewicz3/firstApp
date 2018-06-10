@@ -1,5 +1,5 @@
-<h2>Log in</h2>
 <div class="container">
+<h2>Log in</h2>
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="form-signin">
     <%= f.label :email, class: "sr-only" %><br />
@@ -8,7 +8,7 @@
 
   <div class="form-signin">
     <%= f.label :password, class: "sr-only" %><br />
-    <%= f.password_field :password, class:"form-control", autocomplete: "off" %>
+    <%= f.password_field :password, class:"form-control",  autocomplete: "off" %>
   </div>
 
   <% if devise_mapping.rememberable? -%>
@@ -18,8 +18,8 @@
     </div>
   <% end -%>
 
-  <button class= "btn btn-lg">
-    <%= f.submit  "Log in" %>
+  <button>
+    <%= f.submit "Log in" %>
   </button>
 <% end %>
 </div>

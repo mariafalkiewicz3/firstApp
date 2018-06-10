@@ -5,5 +5,24 @@
     background-color: lightgrey;
 }
 .checkbox {
-    padding: 10px;
+    position: relative;
+    text-align: center;
+}
+.form-signin {
+    padding: 15px;
+    margin: 0 auto;
+    max-width: 330px;
+    position: relative;
+}
+.sr-only {
+    width: 1px;
+    height: 1px;
+    background-color: red;
+    padding: 0px;
+    margin: -1px;
+}
+h2{
+    text-align: center;
+    padding-top: 20px;
+    font-size: 25px;
 }
