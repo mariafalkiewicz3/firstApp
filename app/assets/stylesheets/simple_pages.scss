@@ -36,18 +36,24 @@ body {
 
 h1 {
   font: 100% Helvetica, sans-serif;
-  color: darkgray;
-  font-size: 2.5em;
+  color: gray;
+  font-size: 2.0em;
   font-weight: bold;
 }
 h2 {
   font: 100% Helvetica, sans-serif;
-  color: gray;
+  color: grey;
   font-size: 1.5em;
+}
+h4 {
+  color: grey;
+}
+h5 {
+  color: grey;
 }
 p {
   font: 100% Helvetica, sans-serif;
-  color: darkgrey;
+  color: grey;
   font-size: 1.2em;
 }
 .img-responsive {
