@@ -1,20 +1,35 @@
 <p id="notice"><%= notice %></p>
 
-<table class= "show">
-  <thead>
-    <tr>
-      <td><strong>Name:</strong>
-        <%= @product.name %></td>
-      <td><strong>Description:</strong>
-        <%= @product.description %></td>
-      <td><strong>Image:</strong>
-        <%= image_tag(@product.image_url, class: "img-responsive") %>
-      <td><strong>Colour:</strong>
-        <%= @product.colour %></td>
-      <td><strong>Price:</strong>
-        <%= @product.price %></td>  
-      <td><%= link_to 'Edit', edit_product_path(@product) %></td>
-      <td><%= link_to 'Back', products_path %></td>
-    </tr>
-  </thead>
-</table>
+
+<section class="container-fluid" id= "show-product">
+  <div class="row" data-product-id ="<%= @product.id%>">
+    <div class="col-md-6 col-lg-6 col-xs-12 product_div">
+      <p class="product_title"><%= @product.name %> </p>
+      <section class="product_image"> 
+        <% if @product.image_url.present? %>
+          <%= image_tag(@product.image_url, class:"img-zoom",  data_zoom_image: "@product.image_url") %>
+        <% end %>
+      </section>
+      <p class="product_description"> <%= @product.description %>
+      <p> Colour: <%= @product.colour %></p>
+      <p> Price: $<%= @product.price %> </p>
+      <%= link_to 'Edit', edit_product_path(@product), class:"show_links" %>
+      <%= link_to 'Back', products_path, class:"show_links" %>
+      <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
+    </div>
+    <div class="col-md-6 col-lg-6 col-xs-12 product_div">
+      <h4 class="product_title"> <span class="glyphicon glyphicon-pencil"></span> Comments </h4>
+        <div id="comments">
+          <div class="alert alert-info" style="display: none" role="alert">
+          A new comment was posted!</div>
+          <%= render 'new_comment' %>
+          <%= render 'comments' %>
+        </div>
+    </div>
+  </div>
+</section>
+
+
+
+      
+      
