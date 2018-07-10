@@ -1,34 +1,25 @@
-<header class= "container anchor">
-  <h1>Contact Us</h1>
+<header>
+  <h1 class="header-title">Contact Us</h1>
 </header>
-  <h2><ul> For customer service: (888) 888 888</h2>
-        <li>Monday - Friday 8:30am-5:00pm ET</li>
-        <li>Closed Saturday and Sunday</li>
-      </ul>
-  <h2><ul> To place an order via phone: (800) 800 800</h2>
-        <li>Monday - Friday 8:30am-5:00pm ET</li>
-        <li>Closed Saturday and Sunday</li>
-      </ul> 
-</br></br></br>
 
-<h1>Contact Us</h1>
 <%= flash[:notice] %>
-
-<%= form_with(url:"/simple_pages/thank_you", method: "post", local: true) do |form| %>
-<div class="row">
-  <div class="form-group">
-    <%= form.label :name %>
-    <%= form.text_field :name, class: "form-control", placeholder: "Enter Name" %>
+<div class= "contact">
+  <%= form_with(url:"/simple_pages/thank_you", method: "post", local: true) do |form| %>
+  <div class="row">
+    <div class="form-group">
+      <%= form.label :name %>
+      <%= form.text_field :name, class: "form-control", placeholder: "Enter Name" %>
+    </div>
+    <div class="form-group">
+      <%= form.label :email %>
+      <%= form.text_field :email, class: "form-control", placeholder: "Enter Email" %>
+    </div>
+    <div class="form-group">
+      <%= form.label :message %>
+      <%= form.text_area :message, class: "form-control", placeholder: "Enter Message", rows: 5 %>
+    </div>
   </div>
-  <div class="form-group">
-    <%= form.label :email %>
-    <%= form.text_field :email, class: "form-control", placeholder: "Enter Email" %>
-  </div>
-  <div class="form-group">
-    <%= form.label :message %>
-    <%= form.text_area :message, class: "form-control", placeholder: "Enter Message", rows: 5 %>
-  </div>
+  <%= form.submit "Send", class: "form_label" "btn btn-primary" %>
+  <% end %>
 </div>
-<%= form.submit "Send", class: "form_label" "btn btn-primary" %>
-<% end %>
 

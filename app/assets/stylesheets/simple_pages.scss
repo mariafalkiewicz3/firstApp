@@ -15,12 +15,16 @@ html {
 body {
   background-color: #e1e3e8;
   height: 100%;
-  margin: 0;
   margin-bottom: 40px;
+  margin: 0px;
   padding: 0px;
 }
+.header-title {
+  padding-top:55px;
+  text-align: center;
+}
 .navbar-inverse,
- .colapse {
+.colapse {
   opacity: 0.8;
   margin-left: -15px;
   margin-right: -15px;
@@ -66,13 +70,8 @@ p {
   padding-left: 10px;
 }
 .img-responsive {
-  margin-top: 0px;
+  margin: auto;
   max-height: 200px;
-}
-#footer-main {
-  background-color: grey;
-  width: 100%;
-  height: 142px; 
 }
 .page-wrap {
   min-height: 100%;
@@ -80,7 +79,7 @@ p {
   margin-bottom: -142px; 
 }
 .page-wrap:after {
-  content: "";
+  content: '';
   display: block;
   height: 142px;
 }
@@ -108,7 +107,7 @@ margin:auto;
   margin: 0px;
   height: 100%; 
   width: 100%;
-  background-image: url("http://6.s.dziennik.pl/pliki/3008000/3008792-ksiazka-900-664.jpg");
+  background-image: url('http://6.s.dziennik.pl/pliki/3008000/3008792-ksiazka-900-664.jpg');
 }
 .product_title {
   font-size: 2.5em;
@@ -129,12 +128,10 @@ margin:auto;
   overflow: auto;
   max-width: 100%;
   max-height: 100%;
-  text-align: center;
 }
 .product_image > img {
   max-width: 100%;
   max-height: 100%;
-  text-align: center;
 }
 .product_description {
   margin-top: 15px;
@@ -146,4 +143,19 @@ margin:auto;
 }
 #show-product {
   padding-top: 40px;
+}
+.bestsellers {
+  text-align: center;
+  padding-top: 25px;
+}
+.contact{
+  padding-left: 100px;
+  padding-right: 100px;
+}
+footer {
+  background-color: grey;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding-right: 3em;
 }
