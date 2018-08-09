@@ -95,7 +95,11 @@ p {
   text-align: center;
 }
 .carousel-inner > .item > img{
-margin:auto;
+  margin:auto;
+  max-height: 450px;
+}
+a.carousel-control {
+  background-color: transparent;
 }
 .panel-default {
   padding-top: 70px;
