@@ -28,12 +28,6 @@
         
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><%= form_with(url: products_path, method: 'get', local: true, class: 'nav-search') do |form| %>
-              <%= form.text_field :q, id: 'q',placeholder:"Search for..", class: 'nav_searchbar', value: params[:q] %>
-              <%= button_tag(type: 'submit', class: "btn btn-primary, nav_search_submit") do %>
-                <span class="glyphicon glyphicon-search"></span>
-              <% end %>
-            <% end %></li>
             <li><%= link_to "Home", root_path %></li>
             <li><%= link_to "About", simple_pages_about_path %></li>
             <li><%= link_to "Products", products_path %></li>
@@ -41,9 +35,16 @@
             <li><%= link_to "Contact", simple_pages_contact_path %></li>
             <li>
             <% if user_signed_in? %>
-              <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
+              <li><%= link_to('Logout', destroy_user_session_path, method: :delete) %></li>
             <% else %>
-              <%= link_to('Login', new_user_session_path) %>
+              <li><%= link_to('Login', new_user_session_path) %></li>
+              <li><%= link_to "Sign up", new_user_registration_path %></li>
+              <li><%= form_with(url: products_path, method: 'get', local: true, class: 'nav-search') do |form| %>
+                <%= form.text_field :q, id: 'q',placeholder:"Search for..", class: 'nav_searchbar', value: params[:q] %>
+                <%= button_tag(type: 'submit', class: "btn btn-primary, nav_search_submit") do %>
+                  <span class="glyphicon glyphicon-search"></span>
+                <% end %>
+              <% end %></li>
             <% end %>
             </li>
           </ul>

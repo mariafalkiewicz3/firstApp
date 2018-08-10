@@ -20,15 +20,15 @@ pre {
 }
 
 a {
-  color: #000;
+  color: grey;
 
   &:visited {
     color: #666;
   }
 
   &:hover {
-    color: #fff;
-    background-color: #000;
+    color: white;
+    text-decoration: none;
   }
 }
 
@@ -83,7 +83,7 @@ label {
   display: block;
 }
 .form-group {
-  color: blue;
+  color: grey;
 }
 .form-control {
   background-color: lightgrey;

@@ -9,18 +9,16 @@
 * {
   margin: 0;
 }
-html {
-  height: 100%;
-}
 body {
   background-color: #e1e3e8;
   height: 100%;
   margin-bottom: 40px;
   margin: 0px;
   padding: 0px;
+  font-family: verdana, arial, helvetica, sans-serif;
 }
 .header-title {
-  padding-top:55px;
+  padding-top: 55px;
   text-align: center;
 }
 .navbar-inverse,
@@ -32,9 +30,17 @@ body {
   padding-right: 10px;
 }
  .navbar-inverse .navbar-nav>li>a {
-    color: white;
-    font-weight: 600;
+  color: white;
+  font: 100% Helvetica, sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  font-outline: grey;
+  text-shadow: -1px 0 grey, 0 1px grey, 1px 0 grey, 0 -1px grey;
 }
+ .navbar-inverse .navbar-nav>li>a:hover {
+  color: lightgrey;
+  font-weight: 600;
+  }
  .navbar-inverse .navbar-nav>.active>a {
   color: #a4107a;
   font-weight: 700;
@@ -114,45 +120,6 @@ a.carousel-control {
   width: 100%;
   background-image: url('http://6.s.dziennik.pl/pliki/3008000/3008792-ksiazka-900-664.jpg');
 }
-.product_title {
-  font-size: 2.5em;
-  text-align: center;
-  padding: 20px 0;
-}
-.product_div,
-.product_section {
-  height: 605px;
-  border: 2px solid white;
-  background: radial-gradient(white, #d3d3d3);
-  display: inline-block;
-  overflow: auto;
-}
-.product_image {
-  height: 300px;
-  text-align: center;
-  overflow: auto;
-  max-width: 100%;
-  max-height: 100%;
-}
-.product_image > img {
-  max-width: 100%;
-  max-height: 100%;
-}
-.product_description {
-  margin-top: 15px;
-}
-#comments {
-  margin-left: 20px;
-  overflow: auto;
-  text-align: center;
-}
-#show-product {
-  padding-top: 40px;
-}
-.bestsellers {
-  text-align: center;
-  padding-top: 25px;
-}
 .contact{
   padding-left: 100px;
   padding-right: 100px;
@@ -167,4 +134,10 @@ footer {
 .login-box{
   width: 360px;
   margin: 7% auto;
+}
+.projectName a{
+  color: white;
+}
+.projectName a:hover{
+  color: lightgrey;
 }
