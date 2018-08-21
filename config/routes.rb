@@ -12,4 +12,5 @@ Rails.application.routes.draw do
   get '/products', to: 'products#index'
   get '/orders', to: 'orders#index'
   post 'simple_pages/thank_you'
+  post 'payments/create'
 end
