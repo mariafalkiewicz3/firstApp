@@ -93,4 +93,6 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
   
   config.action_mailer.default_url_options = { host: 'https://mariafirstapp.herokuapp.com' }
+
+  config.cache_store = :dalli_store
 end
