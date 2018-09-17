@@ -13,4 +13,5 @@ Rails.application.routes.draw do
   get '/orders', to: 'orders#index'
   post 'simple_pages/thank_you'
   post 'payments/create'
+  mount ActionCable.server => '/cable'
 end

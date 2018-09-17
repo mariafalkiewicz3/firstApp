@@ -60,5 +60,6 @@ Rails.application.configure do
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
   config.action_mailer.default_url_options = { host: 'https://28a148f303314b1f9a3ee9a25c0adfff.vfs.cloud9.us-east-2.amazonaws.com' }
+  config.app_generators.javascript_engine = :javascript
 end
 

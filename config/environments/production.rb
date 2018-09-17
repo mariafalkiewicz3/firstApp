@@ -94,5 +94,5 @@ Rails.application.configure do
   
   config.action_mailer.default_url_options = { host: 'https://mariafirstapp.herokuapp.com' }
 
-  config.cache_store = :dalli_store
+  config.cache_store = :redis_store, 'redis://localhost:6379/0/cache'
 end
