@@ -5,6 +5,6 @@ test:
   adapter: async
 
 production:
-  adapter: adapter: postgresql
+  adapter: postgresql
   url: postgres://mbuiupzklfynpb:99b5b606a3d6aa59c0a580414b52147c3109a140313795fc7689438c45b231e1@ec2-54-204-39-46.compute-1.amazonaws.com:5432/d4sbdngr9k3631
   channel_prefix: firstApp_production
