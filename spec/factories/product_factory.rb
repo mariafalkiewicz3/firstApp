@@ -1,4 +1,3 @@
-
 FactoryBot.define do
   sequence(:name) { |n| "#{n}" }
 

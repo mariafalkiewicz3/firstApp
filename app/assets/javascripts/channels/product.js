@@ -14,6 +14,7 @@ App.product = App.cable.subscriptions.create("ProductChannel", {
     refreshRating();
     // Called when there's incoming data on the websocket for this channel
   },
+  
   listen_to_comments: function() {
     return this.perform('listen', {
       product_id: $("[data-product-id]").data("product-id")
