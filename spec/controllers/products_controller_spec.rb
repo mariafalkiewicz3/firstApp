@@ -42,23 +42,12 @@ describe ProductsController, type: :controller do
       end
       it 'redirect him/her to root path' do
           get :new, params: { id: @product.id }
-          expect(assigns(:product)).to eq @product
           expect(response).to redirect_to(root_path)
       end
     end
   end
 
   describe 'GET #edit' do
-    context 'when an admin goes to edit a product' do
-      before do
-        sign_in @admin
-      end
-      it 'renders the edit template' do
-        get :edit, params: { id: @product.id }
-        expect(assigns(:product)).to eq @product
-        expect(response).to render_template('edit')
-      end
-    end
     context 'when a non-admin user goes to edit a product' do
       before do
         sign_in @user
@@ -67,6 +56,16 @@ describe ProductsController, type: :controller do
         get :edit, params: { id: @product.id }
         expect(assigns(:product)).to eq @product
         expect(response).to redirect_to(root_path)
+      end
+    end
+    context 'when an admin goes to edit a product' do
+      before do
+        sign_in @admin
+      end
+      it 'renders the edit template' do
+        get :edit, params: { id: @product.id }
+        expect(assigns(:product)).to eq @product
+        expect(response).to render_template('edit')
       end
     end
   end
@@ -93,14 +92,13 @@ describe ProductsController, type: :controller do
         sign_in @admin
       end
       it "updates the product and redirects" do
-        get :edit, params: { id: @product.id }
         patch :update, params: { id: @product.id, product: { name: "notepad",  price: "5", description: 'nice'}}
         expect(response).to be_redirect
       end
     end
     context "with bad data" do
       it "does not change the product, and redirects to login page" do
-        patch :update, id: @product.id, product: { name: "notepad", price: "four"}
+        patch :update, params: { id: @product.id, product: { name: "10", price: "four"}}
         expect(response).to redirect_to new_user_session_path
       end
     end
