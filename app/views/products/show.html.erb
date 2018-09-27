@@ -32,6 +32,16 @@
           <%= render 'comments' %>
           <%= will_paginate @comments %>
         </div>
+         <h6>
+        Views:
+        <span class="badge badge-pill badge-warning">
+          <%= @product.views %>
+        </span>
+        Latest reviewer:&nbsp;&nbsp;
+        <span class="badge badge-pill badge-warning">
+          <%= @product.get_recent_reviewer %>
+        </span>
+        </h6>
     </div>
   </div>
 

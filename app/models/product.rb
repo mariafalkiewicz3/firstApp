@@ -22,7 +22,7 @@ class Product < ApplicationRecord
   end
 
   def set_recent_reviewer(user_name)
-    $redis.set("rr_product:#{id}","#{user_name}")
+    $redis.set("rr_product:#{id}",user_name)
   end
 
   def get_recent_reviewer

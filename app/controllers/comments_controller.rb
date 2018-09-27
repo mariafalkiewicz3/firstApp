@@ -6,6 +6,7 @@ class CommentsController < ApplicationController
     @user = current_user
     respond_to do |format|
       if @comment.save
+        @product.set_recent_reviewer(current_user.first_name)
         #ActionCable.server.broadcast 'product_channel', comment: @comment, average_rating: @comment.product.average_rating
         format.html { redirect_to @product, notice: 'Review was created successfully.' }
         format.json { render :show, status: :created, location: @product }
