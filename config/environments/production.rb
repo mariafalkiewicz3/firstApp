@@ -95,7 +95,17 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { host: 'https://mariafirstapp.herokuapp.com' }
 
   config.cache_store = :redis_store, 'redis://localhost:6379/0/cache'
+  config.cache_store = :mem_cache_store,
+                    (ENV["MEMCACHIER_SERVERS"] || "").split(","),
+                    {:username => ENV["MEMCACHIER_USERNAME"],
+                     :password => ENV["MEMCACHIER_PASSWORD"],
+                     :failover => true,
+                     :socket_timeout => 1.5,
+                     :socket_failure_delay => 0.2,
+                     :down_retry_delay => 60
+                    }
 
   config.web_socket_server_url = "wss://firstApp.herokuapp.com/cable"
   config.action_cable.allowed_request_origins = ['https://firstApp.herokuapp.com', 'http://firstApp.herokuapp.com']
+
 end
